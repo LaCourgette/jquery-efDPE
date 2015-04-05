@@ -1,0 +1,114 @@
+﻿/*
+	Copyright (c) 2014 - 2015 Edgar Fournival
+
+	Permission is hereby granted, free of charge, to any person obtaining a copy
+	of this software and associated documentation files (the "Software"), to deal
+	in the Software without restriction, including without limitation the rights
+	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	copies of the Software, and to permit persons to whom the Software is
+	furnished to do so, subject to the following conditions:
+
+	The above copyright notice and this permission notice shall be included in
+	all copies or substantial portions of the Software.
+
+	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	THE SOFTWARE.
+*/
+
+.efDPE {
+	position: relative;
+	border: 1px solid black;
+	width: 390px;
+}
+
+.efDPE .efDPE-legende {
+	margin: 5px;
+	font-size: 110%;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.efDPE .efDPE-ligne {
+	position: relative;
+	height: 38px;
+	line-height: 38px;
+	margin: 5px;
+}
+
+.efDPE .efDPE-intervalle {
+	position: absolute;
+	vertical-align: middle;
+	margin-left: 8px;
+	font-weight: bold;
+}
+
+.efDPE .efDPE-barre {
+	display: inline-block;
+	background-color: black;
+	height: 38px;
+}
+
+.efDPE .efDPE-categorie {
+	float: right;
+	vertical-align: middle;
+	font-size: 125%;
+	font-weight: bold;
+}
+
+.efDPE .efDPE-triangle {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-top: 	19px solid transparent;
+	border-bottom: 	19px solid transparent; 
+	border-left:	19px solid black; 
+}
+
+.efDPE .efDPE-triangle-inv {
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-top: 	19px solid transparent;
+	border-bottom: 	19px solid transparent; 
+	border-right:	19px solid black; 
+}
+
+.efDPE .efDPE-panneau-indicateur {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 90px;
+	border-left: 1px solid black;
+}
+
+.efDPE .efDPE-indicateur {
+	position: relative;
+	height: 38px;
+	line-height: 38px;
+	float: right;
+}
+
+.efDPE .efDPE-valeur {
+	position: absolute;
+	font-size: 150%;
+	color: white;
+	vertical-align: middle;
+	right: 0;
+	margin-right: 10px;
+	font-weight: bold;
+}
+
+.efDPE .efDPE-description {
+	position: absolute;
+	line-height: 0;
+	font-size: 75%;
+	width: 80px;
+	text-align: center;
+	margin-top: -5px;
+}
