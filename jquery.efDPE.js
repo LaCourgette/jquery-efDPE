@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright (c) 2014 - 2015 Edgar Fournival
+	Copyright (c) 2014 - 2017 Edgar Fournival
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,6 @@
 
 (function($) {
 	$.fn.efDPE = function(options) {
-	
 		var parametres = {
 			"afficherLegendes": true,
 			"legendes": ["Logement économe", "Logement énergivore"],
@@ -34,29 +33,27 @@
 			"incrementLargeurLigne": 30,
 			"valeur": null
 		};
-		
+
 		if (options) $.extend(parametres, options);
-	
+
 		return this.each(function(options) {
-		
 			var $this = $(this).empty().addClass("efDPE");
-		
+
 			if (!parametres.valeur) {
 				parametres.valeur = $this.data("valeur");
 			}
-			
+
 			var valeur = '<div class="efDPE-indicateur">' +
 							'<div class="efDPE-valeur">' + parametres.valeur + '</div>' +
 							'<div class="efDPE-triangle-inv"></div>' +
 							'<div class="efDPE-barre" style="width: 60px;"></div>' +
 							(parametres.afficherDescription ? '<div class="efDPE-description">kWh<sub>EP</sub>/m<sup>2</sup>.an</div>' : '') +
 						'</div>';
-			
-			for(i=0;i<7;i++) {
-			
+
+			for(var i = 0; i < 7; i++) {
 				var intervalle;
 				var insValeur = false;
-				
+
 				if (i == 0) {
 					intervalle = "&le; " + parametres.intervalles[i];
 					insValeur = (parametres.valeur <= parametres.intervalles[i]);
@@ -67,28 +64,25 @@
 					intervalle = (parametres.intervalles[i-1]+1) + " &agrave; " + parametres.intervalles[i];
 					insValeur = (parametres.valeur >= (parametres.intervalles[i-1]+1) && parametres.valeur <= parametres.intervalles[i]);
 				}
-	
+
 				$this.append('<div class="efDPE-ligne">' +
 								'<div class="efDPE-intervalle">' + intervalle + '</div>' +
-								'<div class="efDPE-barre" style="width: ' + 
+								'<div class="efDPE-barre" style="width: ' +
 									(parametres.debutLargeurLigne + parametres.incrementLargeurLigne*i) + 'px; background-color: ' +
 									parametres.couleurs[i] + ';">' +
 									'<div class="efDPE-categorie">' + parametres.categories[i] + '</div>' +
 								'</div>' +
-								'<div class="efDPE-triangle" style="border-left-color: ' + parametres.couleurs[i] + ';"></div>' + 
+								'<div class="efDPE-triangle" style="border-left-color: ' + parametres.couleurs[i] + ';"></div>' +
 								(insValeur ? valeur : '') +
 							 '</div>');
-							
 			}
-			
+
 			$this.append('<div class="efDPE-panneau-indicateur"></div>');
-			
+
 			if (parametres.afficherLegendes) {
 				$this.prepend('<div class="efDPE-legende">' + parametres.legendes[0] + '</div>')
 					 .append('<div class="efDPE-legende">' + parametres.legendes[1] + '</div>');
 			}
-			
 		});
-		
 	};
 })(jQuery);

@@ -1,5 +1,5 @@
 ﻿/*
-	Copyright (c) 2014 - 2015 Edgar Fournival
+	Copyright (c) 2014 - 2017 Edgar Fournival
 
 	Permission is hereby granted, free of charge, to any person obtaining a copy
 	of this software and associated documentation files (the "Software"), to deal
@@ -21,6 +21,7 @@
 */
 
 .efDPE {
+	font-family: sans-serif;
 	position: relative;
 	border: 1px solid black;
 	width: 390px;
@@ -62,20 +63,20 @@
 
 .efDPE .efDPE-triangle {
 	display: inline-block;
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-top: 	19px solid transparent;
-	border-bottom: 	19px solid transparent; 
-	border-left:	19px solid black; 
+	border-bottom: 	19px solid transparent;
+	border-left:	19px solid black;
 }
 
 .efDPE .efDPE-triangle-inv {
 	display: inline-block;
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-top: 	19px solid transparent;
-	border-bottom: 	19px solid transparent; 
-	border-right:	19px solid black; 
+	border-bottom: 	19px solid transparent;
+	border-right:	19px solid black;
 }
 
 .efDPE .efDPE-panneau-indicateur {
